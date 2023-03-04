@@ -1,8 +1,12 @@
 # Project exclude paths
-/target/
+*.log
+*.dot
+*.iml
+*~
+target/
 
 .evosuite/
 
-.idea
+.idea/
 
 evoproject.iml
