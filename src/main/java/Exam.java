@@ -22,4 +22,11 @@ public class Exam {
         else return 5;
     }
 
+    public boolean checkValue(String value) {
+        if (value.length() != 5) {
+            return value.isBlank();
+        }
+        return value.contains("a");
+    }
+
 }
