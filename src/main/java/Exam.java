@@ -1,9 +1,8 @@
 public class Exam {
 
-    public int grade(boolean cheated, int points) {
-        if (points < 0 || points > 100) {
-            throw new IllegalArgumentException("invalid points");
-        }
+    public int grade(int points, boolean cheated) {
+        checkInputValues(points);
+
         if (cheated) {
             return 5;
         }
@@ -22,11 +21,10 @@ public class Exam {
         else return 5;
     }
 
-    public boolean checkValue(String value) {
-        if (value.length() != 5) {
-            return value.isBlank();
+    public void checkInputValues(int points) {
+        if (points < 0 || points > 100) {
+            throw new IllegalArgumentException("invalid points");
         }
-        return value.contains("a");
     }
 
 }
